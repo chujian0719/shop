@@ -1,0 +1,30 @@
+@import "./../constant";
+
+.common-footer {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	color: #ffffff;
+	height: px2rem($footerHeight);
+	line-height: px2rem($footerHeight);
+	flex-direction: row;
+	
+	@at-root {
+		.common-left {
+			@include borderTop();
+			flex-direction: row;
+			background-color: #ffffff;
+			width: px2rem(490);
+		}
+		
+		.common-right {
+			flex: 1;
+			color: #ffffff;
+			font-size: px2rem(28);
+			background-color: #EF3338;
+			text-align: center;
+			line-height: px2rem($footerHeight);
+		}
+	}
+}

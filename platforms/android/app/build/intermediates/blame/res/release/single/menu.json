@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/yangdong/weex/shop/platforms/android/app/build/intermediates/res/merged/release/menu/main.xml",
+        "source": "/Users/yangdong/weex/shop/platforms/android/app/src/main/res/menu/main.xml"
+    },
+    {
+        "merged": "/Users/yangdong/weex/shop/platforms/android/app/build/intermediates/res/merged/release/menu/main_scan.xml",
+        "source": "/Users/yangdong/weex/shop/platforms/android/app/src/main/res/menu/main_scan.xml"
+    }
+]

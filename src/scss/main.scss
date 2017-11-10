@@ -1,0 +1,13 @@
+@import "./constant.scss";
+
+.main-show-header {
+	//padding-top: px2rem($headerHeight);
+}
+
+.main-show-footer {
+	padding-bottom: px2rem($footerHeight);
+}
+
+.router-view {
+	flex: 1;
+}

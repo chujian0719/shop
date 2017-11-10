@@ -1,0 +1,42 @@
+@import "./constant";
+
+.login {
+	padding-top: px2rem($headerHeight);
+	background: #f3f5f7;
+	.form {
+		overflow: hidden;
+		padding: 0 px2rem(20);
+	}
+	.input-wrap {
+		width: 100%;
+		height: px2rem(80);
+		margin-top: px2rem(40);
+		box-shadow: 0 0 0 1px #d7d7d7;
+		background-color: #ffffff;
+		input {
+			border: none;
+			width: 100%;
+			height: 100%;
+			padding: 0.1rem 0.2rem;
+		}
+	}
+	.submit {
+		display: block;
+		color: #ffffff;
+		text-align: center;
+		font-size: px2rem(26);
+		background: red;
+		margin-top: px2rem(80);
+		line-height: px2rem(80);
+	}
+	.other-operate {
+		padding: px2rem(30) px2rem(22) 0;
+		display: flex;
+		justify-content: space-between;
+		a {
+			color: #9a6d6d;
+			font-size: px2rem(28);
+			line-height: px2rem(60);
+		}
+	}
+}

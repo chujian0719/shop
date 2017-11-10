@@ -1,0 +1,65 @@
+@import "./constant";
+@import "./common/footer";
+
+.addressList {
+	font-size: px2rem(26);
+	background-color: #EEEEEE;
+	padding-bottom: px2rem($footerHeight);
+	
+	@at-root {
+		.al-item {
+			@include padding(px2rem(20), px2rem(20));
+			background-color: #ffffff;
+			margin-bottom: px2rem(18);
+			@at-root {
+				.address-title {
+					flex-direction: row;
+					justify-content: flex-start;
+					padding-bottom: px2rem(25);
+					
+					@at-root {
+						.address-title-text {
+							font-size: px2rem(28);
+							line-height: px2rem(30);
+						}
+						
+						.address-receive-name {
+							margin-right: px2rem(40);
+						}
+						
+						.address-content {
+							@include borderBottom();
+							@extend .address-title-text;
+						}
+					}
+				}
+				
+				.address-operate {
+					padding-top: px2rem(20);
+					justify-content: space-between;
+					flex-direction: row;
+					@at-root {
+						.ao-left {
+							font-size: px2rem(28);
+						}
+						
+						.ao-right {
+							flex-direction: row;
+						}
+						
+						.ao-btn {
+							font-size: px2rem(28);
+							margin-left: px2rem(10);
+						}
+					}
+				}
+			}
+		}
+		
+		.addressList-footer {
+			font-size: px2rem(30);
+			background-color: #ff473d;
+			text-align: center;
+		}
+	}
+}

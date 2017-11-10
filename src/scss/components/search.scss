@@ -1,0 +1,49 @@
+@import '../constant.scss';
+
+.search {
+	flex: 1;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	
+	@at-root {
+		$searchInputHeight: 58;
+		
+		.search-input-box {
+			flex: 1;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			background-color: #e9e9eb;
+			height: px2rem($searchInputHeight);
+			border-radius: px2rem(50);
+			padding-left: px2rem(22);
+		}
+		
+		.search-icon {
+			width: px2rem(30);
+			height: px2rem(30);
+			margin-right: px2rem(14);
+		}
+		
+		.search-input {
+			flex: 1;
+			font-size: px2rem(26);
+			color: #444;
+			height: px2rem($searchInputHeight);
+		}
+		
+		.search-other {
+			@include margin(px2rem(0), px2rem(20), px2rem(0), px2rem(25));
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			@at-root {
+				.message-icon {
+					width: px2rem(44);
+					height: px2rem(44);
+				}
+			}
+		}
+	}
+}

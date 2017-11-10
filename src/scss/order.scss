@@ -1,0 +1,207 @@
+@import "./constant";
+@import "./common/footer";
+
+.c-red {
+	color: #ff0000;
+}
+
+.order {
+	$left: 20;
+	
+	color: #666;
+	background-color: #f5f5f5;
+	padding-bottom: px2rem($footerHeight);
+	
+	@at-root {
+		//地址
+		.order-address {
+			@include padding(px2rem(20), px2rem($left));
+			height: px2rem(150);
+			background-color: #ffffff;
+			margin-bottom: px2rem(20);
+			justify-content: center;
+			
+			@at-root {
+				.address-title {
+					@include height(40);
+					margin-bottom: px2rem(20);
+					flex-direction: row;
+					justify-content: space-between;
+				}
+				
+				.address-name {
+					font-size: px2rem(28);
+					font-weight: 500;
+					margin-right: px2rem(50);
+				}
+				
+				.address-phone {
+					color: #9f9fa2;
+					font-size: px2rem(28);
+				}
+				
+				.address-content {
+					font-size: px2rem(28);
+				}
+				
+				.address-hint-info {
+					color: #ff0000;
+					font-size: px2rem(30);
+					text-align: center;
+				}
+			}
+		}
+		
+		.order-item {
+			margin-bottom: px2rem(10);
+		}
+		
+		.order-item-title {
+			@include height(70);
+			font-size: px2rem(28);
+			background-color: #ffffff;
+			padding-left: px2rem($left);
+		}
+		
+		.order-item-content {
+		
+		}
+		
+		.product-item {
+			@include borderBottom();
+			@include padding(px2rem(10), px2rem($left));
+			background-color: #f5f5f5;
+			flex-direction: row;
+		}
+		
+		.product-image {
+			width: px2rem(170);
+			height: px2rem(170);
+			margin-right: px2rem(20);
+		}
+		
+		.product-info {
+			flex: 1;
+			padding-top: px2rem(10);
+			justify-content: space-between;
+			@at-root {
+				.product-info-title {
+					lines: 3;
+					font-size: px2rem(26);
+					text-overflow: ellipsis;
+				}
+				
+				.product-info-money-num {
+					flex-direction: row;
+					justify-content: space-between;
+				}
+				
+				.money-num-text {
+					font-size: px2rem(28);
+				}
+			}
+		}
+		
+		.order-item-other {
+			@include padding(0, px2rem($left));
+			background-color: #ffffff;
+			
+			@at-root {
+				%common {
+					@include height(80);
+					font-size: px2rem(28);
+				}
+				
+				.other-logistics-type {
+					@include borderBottom();
+					flex-direction: row;
+					justify-content: space-between;
+				}
+				
+				.logistics-type-text {
+					@extend %common;
+				}
+				
+				.other-words {
+					@include borderBottom();
+					flex-direction: row;
+					align-items: center;
+				}
+				
+				.words-title {
+					@extend %common;
+					padding-right: px2rem(20);
+				}
+				
+				.words-input {
+					@include height(70);
+					@include padding(px2rem(15), px2rem(5));
+					flex: 1;
+					font-size: px2rem(26);
+				}
+				
+				.other-total {
+					flex-direction: row;
+					justify-content: flex-end;
+				}
+				
+				.other-total-text {
+					@extend %common;
+				}
+			}
+		}
+		
+		.of-left {
+			flex-direction: row;
+			justify-content: flex-end;
+			align-items: center;
+			padding-right: px2rem(20);
+		}
+		
+		.ofl-title {
+			color: #333333;
+			font-size: px2rem(26);
+			margin-right: px2rem(16);
+		}
+		
+		.ofl-price {
+			color: #f57f7f;
+			font-size: px2rem(30);
+		}
+	}
+}
+
+//.win-logistics {
+//	font-size: px2rem(26);
+//	height: px2rem(800);
+//	padding-top: px2rem(50);
+//
+//	header {
+//		@include height(px2rem(80));
+//
+//		font-size: px2rem(30);
+//		text-align: center;
+//	}
+//
+//	ul {
+//		padding: px2rem(60) px2rem(20) px2rem(20);
+//
+//		li {
+//			@include borderBottom();
+//			@include height(80);
+//		}
+//	}
+//
+//	footer {
+//		@include height(100);
+//
+//		position: absolute;
+//		left: 0;
+//		bottom: 0;
+//		width: 100%;
+//		color: #ffffff;
+//		background: red;
+//		text-align: center;
+//		font-size: px2rem(30);
+//	}
+//}

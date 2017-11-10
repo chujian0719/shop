@@ -1,0 +1,52 @@
+@import "../constant.scss";
+
+.w-loading {
+	position: fixed;
+	top: px2rem($headerHeight);
+	right: 0;
+	left: 0;
+	bottom: 0;
+	align-items: center;
+	justify-content: center;
+	@at-root {
+		.w-loading-mask {
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+		}
+		
+		.w-loading-toast {
+			transform: translate(-20%, px2rem(-$headerHeight/2));
+			justify-content: center;
+			align-items: center;
+		}
+		
+		
+		.w-loading-image {
+			width: px2rem(70);
+			height: px2rem(70);
+		}
+		
+		.w-loading-text {
+			color: #666666;
+			font-size: px2rem(20);
+			margin-top: px2rem(14);
+		}
+		
+		//.toast.type {
+		//	color: #ffffff;
+		//	background: rgba(17, 17, 17, 0.7);
+		//	padding: 0 px2rem(30) 15px;
+		//}
+		
+		//.toast {
+		//	@include allCenter(fixed);
+		//	z-index: 4001;
+		//	text-align: center;
+		//	border-radius: 5px;
+		//	color: #666666;
+		//}
+	}
+}

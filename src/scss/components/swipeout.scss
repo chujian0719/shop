@@ -1,0 +1,13 @@
+@import "../constant";
+
+.w-swipeout-item {
+
+}
+
+.w-swipeout-button-box {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	transform: translateX(100%);
+}

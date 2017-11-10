@@ -1,0 +1,214 @@
+@import "constant";
+@import "./common/common";
+@import "./common/footer";
+
+.orderDetail {
+	$left: 20;
+	background-color: #fafafa;
+	padding-bottom: px2rem($footerHeight);
+	
+	@at-root {
+		.order-status {
+			height: px2rem(180);
+			padding-left: px2rem(100);
+			background-color: #FF003B;
+			flex-direction: row;
+			align-items: center;
+		}
+		
+		.order-status-text {
+			color: #ffffff;
+			font-size: px2rem(32);
+			font-weight: 500;
+		}
+	}
+	
+	@at-root {
+		.logistics {
+			$padding: px2rem(30);
+			@include padding($padding, $padding, $padding, px2rem(100));
+			@include borderBottom();
+			background-color: #ffffff;
+		}
+		
+		.logistics-text {
+			color: #359a2b;
+			font-size: px2rem(30);
+			line-height: px2rem(50);
+		}
+	}
+	
+	@at-root {
+		//地址
+		.order-address {
+			@include padding(px2rem(20), px2rem($left));
+			height: px2rem(150);
+			background-color: #ffffff;
+			margin-bottom: px2rem(20);
+			justify-content: center;
+			
+			@at-root {
+				.address-title {
+					@include height(40);
+					margin-bottom: px2rem(20);
+					flex-direction: row;
+					justify-content: space-between;
+				}
+				
+				.address-name {
+					color: #666;
+					font-size: px2rem(28);
+					margin-right: px2rem(50);
+				}
+				
+				.address-phone {
+					color: #666;
+					font-size: px2rem(28);
+				}
+				
+				.address-content {
+					color: #666;
+					font-size: px2rem(28);
+				}
+				
+				.address-hint-info {
+					color: #ff0000;
+					font-size: px2rem(30);
+					text-align: center;
+				}
+			}
+		}
+	}
+	
+	@at-root {
+		.order-title {
+			@include padding(0, px2rem($left));
+			@include height(80);
+			
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			background-color: #ffffff;
+		}
+		
+		.order-title-text {
+			font-size: px2rem(28);
+		}
+		
+		.order-content {
+			background-color: #ffffff;
+		}
+		
+		.product-item {
+			@include padding(px2rem(15), px2rem($left));
+			background-color: #fafafa;
+			margin-bottom: px2rem(10);
+			flex-direction: row;
+		}
+		
+		.product-image {
+			margin-right: px2rem(20);
+			width: px2rem(160);
+			height: px2rem(160);
+		}
+		
+		.product-info {
+			flex: 1;
+			flex-direction: row;
+			
+			@at-root {
+				.product-info-left {
+					width: px2rem(400);
+				}
+				
+				.product-title {
+					font-size: px2rem(28);
+					lines: 4;
+					text-overflow: ellipsis;
+				}
+				
+				.product-info-right {
+					flex: 1;
+				}
+				
+				.new-price {
+					text-align: right;
+					line-height: px2rem(34);
+					font-size: px2rem(28);
+					padding-bottom: px2rem(10);
+				}
+				
+				.num {
+					text-align: right;
+					color: #9c9c9c;
+					font-size: px2rem(26);
+				}
+			}
+		}
+		
+		.order-money {
+			@include padding(0, $left);
+			background-color: #ffffff;
+			margin-bottom: px2rem(20);
+		}
+		
+		.order-money-item {
+			height: px2rem(50);
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			
+			@at-root {
+				%moneyFont {
+					font-size: px2rem(26);
+				}
+				
+				.order-money-label {
+					@extend %moneyFont;
+					color: #999;
+				}
+				.order-money-content {
+					@extend %moneyFont;
+					color: #051b28;
+				}
+			}
+		}
+	}
+	
+	@at-root {
+		.order-message {
+			@include padding(px2rem(10), px2rem($left));
+			background-color: #ffffff;
+			margin-bottom: px2rem(20);
+		}
+		.order-message-text {
+			@include height(45);
+			font-size: px2rem(26);
+			color: #999;
+		}
+	}
+	
+	@at-root {
+		.orderDetail-footer {
+			@include borderTop();
+			@include padding(px2rem(18), px2rem($left));
+			flex-direction: row;
+			justify-content: flex-end;
+			align-items: center;
+			background-color: #ffffff;
+			
+			@at-root {
+				.order-btn {
+					@include borderAround(#b8b8b8, px2rem(50));
+					@include padding(px2rem(15), 0);
+					
+					width: px2rem(200);
+					color: #333333;
+					font-size: px2rem(30);
+					text-align: center;
+					margin-left: px2rem(20);
+				}
+			}
+		}
+	}
+}

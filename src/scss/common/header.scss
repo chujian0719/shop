@@ -1,0 +1,53 @@
+@import "./../constant";
+
+.header {
+	@include borderBottom();
+	background-color: #4DB5EE;
+	
+	@at-root {
+		.header-top {
+			height: px2rem($headerTop);
+		}
+		
+		.header-content {
+			flex: 1;
+			flex-direction: row;
+			height: px2rem($headerContentHeight);
+		}
+		
+		.header-content-default {
+			flex: 1;
+			padding-right: px2rem(100);
+			flex-direction: row;
+			align-items: center;
+		}
+		
+		.header-content-search {
+			flex: 1;
+			flex-direction: row;
+			align-items: center;
+		}
+		
+		.header-back-box {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			padding-left: px2rem(16);
+			padding-right: px2rem(16);
+		}
+		
+		.back {
+			width: px2rem(40);
+			height: px2rem(40);
+		}
+		
+		.header-title {
+			flex: 1;
+			color: #eeeeee;
+			font-size: px2rem(34);
+			lines: 1;
+			text-overflow: ellipsis;
+			text-align: center;
+		}
+	}
+}

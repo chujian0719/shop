@@ -1,0 +1,229 @@
+@import "./constant.scss";
+@import "./common/common";
+
+.list {
+	background-color: #ffffff;
+	padding-top: px2rem(90);
+	
+	@at-root {
+		.list-content {
+			flex: 1;
+		}
+	}
+	
+	@at-root {
+		.gl-item {
+			@include border(1px, solid, #EFEFEF, bottom);
+			@include padding(px2rem(18), px2rem(20));
+			
+			color: #333333;
+			font-size: px2rem(26);
+			flex-direction: row;
+		}
+		
+		.gl-item-image {
+			width: px2rem(160);
+			height: px2rem(160);
+		}
+		
+		.gl-item-info {
+			flex: 1;
+			margin-left: px2rem(40);
+			margin-right: px2rem(20);
+			
+			@at-root {
+				.info-title {
+					color: #333;
+					font-size: px2rem(26);
+					lines: 2;
+					text-overflow: ellipsis;
+				}
+				
+				.info-city {
+					@include padding(px2rem(15), 0);
+					color: #adadad;
+					font-size: px2rem(26);
+				}
+				
+				.info-other {
+					flex-direction: row;
+					align-items: flex-end;
+				}
+				
+				.info-other-money {
+					color: #ed5b1f;
+					font-size: px2rem(36);
+					width: px2rem(200);
+				}
+				
+				.info-other-sale {
+					flex: 1;
+					color: #adadad;
+					font-size: px2rem(24);
+				}
+			}
+		}
+		
+	}
+	
+	@at-root {
+		$panelHeight: 90;
+		
+		.list-panel {
+			@include border(1px, solid, #EFEFEF, bottom);
+			position: fixed;
+			top: px2rem($headerHeight);
+			left: 0;
+			right: 0;
+			height: px2rem($panelHeight);
+			flex-direction: row;
+			align-items: center;
+			background-color: #ffffff;
+			
+			@at-root {
+				.active {
+					color: #ff0000;
+				}
+				
+				.lp-sort {
+					flex: 1;
+					flex-direction: row;
+				}
+				
+				%text {
+					text-align: center;
+					font-size: px2rem(26);
+					line-height: px2rem(90);
+				}
+				
+				.lp-sort-item {
+					@extend %text;
+					flex: 1;
+				}
+				
+				.lp-filter {
+					@extend %text;
+					text-align: center;
+					width: px2rem(750/4);
+				}
+			}
+		}
+		
+		.sort-drawer {
+			background-color: #ffffff;
+			position: fixed;
+			top: px2rem($headerHeight + $panelHeight);
+			left: 0;
+			right: 0;
+			//transition-property: transform;
+			//transition-duration: 0.3s;
+			//transition-timing-function: linear;
+			transform: translateY(0);
+			opacity: 0;
+			
+			@at-root {
+				.sort-drawer-list {
+					padding-left: px2rem(40);
+					@at-root {
+						.sort-drawer-item {
+							@include border(1px, solid, #EFEFEF, bottom);
+							font-size: px2rem(26);
+							line-height: px2rem(75);
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	//筛选详情
+	@at-root {
+		$filterDetailWidth: 520;
+		$filterDetailPadding: 20;
+		
+		.filter-detail {
+			flex: 1;
+			width: px2rem($filterDetailWidth);
+			font-size: px2rem(24);
+		}
+		
+		.filter-detail-scroll {
+			@include padding(px2rem($filterDetailPadding), px2rem($filterDetailPadding));
+			flex: 1;
+		}
+		
+		.fd-item {
+			@include borderBottom(#EFEFEF);
+			padding-bottom: px2rem(10);
+		}
+		
+		.fd-title {
+			@include height(70);
+			
+			font-size: px2rem(24);
+			color: #7B7B7B;
+		}
+		
+		.fd-content {
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		
+		.fd-price {
+			@include padding(px2rem(10), px2rem(10));
+			
+			background-color: #F4F4F4;
+			align-items: center;
+			margin-bottom: px2rem(20);
+		}
+		
+		.fd-price-input {
+			@include padding(px2rem(8), px2rem(20));
+			
+			background-color: #ffffff;
+			width: px2rem(($filterDetailWidth - $filterDetailPadding*2)/2.4);
+			text-align: center;
+			line-height: px2rem(30);
+			font-size: px2rem(24);
+		}
+		
+		.fd-price-interval {
+			color: #000000;
+			font-size: px2rem(24);
+		}
+		
+		.fd-content-item {
+			@include padding(px2rem(14), 0);
+			
+			color: #323232;
+			font-size: px2rem(24);
+			text-align: center;
+			background-color: #EEEEEE;
+			border-radius: px2rem(10);
+			width: px2rem(($filterDetailWidth - $filterDetailPadding*2) / 3.2);
+			margin-bottom: px2rem(20);
+		}
+		
+		.fd-btns {
+			flex-direction: row;
+			@at-root {
+				.fd-btn {
+					@include height(74);
+					color: #ffffff;
+					font-size: px2rem(28);
+					text-align: center;
+					flex: 1;
+				}
+				
+				.reset {
+					background-color: #FDA32B;
+				}
+				
+				.submit {
+					background-color: #FC5822;
+				}
+			}
+		}
+	}
+}

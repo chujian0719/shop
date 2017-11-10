@@ -1,0 +1,137 @@
+@import "./constant";
+@import "./common/footer";
+
+.addressEdit {
+	background-color: #FFFFFF;
+	padding-bottom: px2rem($footerHeight);
+	
+	@at-root {
+		$pickerItemHeight: 80;
+		
+		.cover {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: #333333;
+			opacity: 0;
+		}
+		
+		.picker {
+			@include borderTop();
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: #ffffff;
+			transform: translateY(100%);
+			transition-property: transform;
+			transition-duration: 0.3s;
+			transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1.0);
+		}
+		
+		.picker-header {
+			@include height(90);
+			@include borderBottom(#dddddd);
+			
+			font-size: px2rem(34);
+			text-align: center;
+			color: #000;
+		}
+		
+		.picker-content {
+			flex-direction: row;
+			flex: 1;
+		}
+		
+		.content-cover {
+			@include borderTop(#dddddd);
+			@include borderBottom(#dddddd);
+			position: absolute;
+			left: 0;
+			right: 0;
+			height: px2rem($pickerItemHeight);
+			top: px2rem($pickerItemHeight * 3);
+		}
+		
+		.content-item {
+			background-image: linear-gradient(to bottom, #fefefe, rgba(255, 255, 255, 0));
+			height: px2rem($pickerItemHeight * 7);
+			flex: 1;
+			overflow: hidden;
+		}
+		
+		.content-list {
+			@include padding(px2rem($pickerItemHeight * 3), 0);
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			transition-property: transform;
+			transition-duration: 0.3s;
+			transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1.0);
+			//background-image:linear-gradient(to bottom,#a80077,#66ff00);
+		}
+		
+		.district-name {
+			@include height($pickerItemHeight);
+			font-size: px2rem(32);
+			text-align: center;
+			color: #000;
+		}
+	}
+	
+	@at-root {
+		.info-item {
+			@include borderBottom();
+			@include padding(px2rem(10), px2rem(20));
+			flex-direction: row;
+			
+			@at-root {
+				%common {
+					font-size: px2rem(28);
+					line-height: px2rem(56);
+				}
+				
+				.item-label {
+					@extend %common;
+					width: px2rem(150);
+				}
+				
+				.item-input {
+					@extend %common;
+					flex: 1;
+				}
+				
+				.district-text {
+					@extend %common;
+					flex: 1;
+					text-align: right;
+				}
+				
+				.textarea-box {
+					@include padding(0, px2rem(10));
+					@include borderBottom();
+				}
+				
+				.item-textarea {
+					font-size: px2rem(28);
+					flex: 1;
+				}
+				
+				.set-text {
+					@extend %common;
+				}
+			}
+		}
+		
+		.addressEdit-footer {
+			font-size: px2rem(32);
+			background-color: #ff1010;
+			text-align: center;
+		}
+	}
+	
+}
+

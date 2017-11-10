@@ -1,0 +1,113 @@
+@import "./../constant";
+
+.w-icon-cart {
+	//background-image: url('../../images/footer/cart.svg');
+	//background-repeat: no-repeat;
+	//background-size: contain;
+}
+
+.footer {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ffffff;
+	box-shadow: 0 0 1px #c0c0c4;
+	
+	@at-root {
+		.footer-tool {
+			//color: #c6c6c6;
+			flex-direction: row;
+			height: px2rem($footerHeight);
+		}
+		
+		.tool-item {
+			color: #333333;
+			font-size: px2rem(26);
+			flex: 1;
+			justify-content: center;
+			align-items: center;
+			//.active {
+			//	p {
+			//		color: #d81e06;
+			//	}
+			//}
+		}
+		
+		.tool-item-text {
+			color: #333333;
+			font-size: px2rem(22);
+			margin-top: px2rem(10);
+		}
+		
+		.footer-icon {
+			width: px2rem(46);
+			height: px2rem(46);
+			
+			@at-root {
+				//.icon-home {
+				//	background-image: url('../../images/footer/home.svg');
+				//	background-repeat: no-repeat;
+				//	background-size: contain;
+				//}
+				//.icon-sort {
+				//	background-image: url('../../images/footer/sort.svg');
+				//	background-repeat: no-repeat;
+				//	background-size: contain;
+				//}
+				//.icon-my {
+				//	background-image: url('../../images/footer/my.svg');
+				//	background-repeat: no-repeat;
+				//	background-size: contain;
+				//}
+			}
+		}
+		
+		//.active {
+		//	.icon-home {
+		//		background: url('../../images/footer/home_active.svg') no-repeat;
+		//		background-size: contain;
+		//	}
+		//	.icon-sort {
+		//		background: url('../../images/footer/sort_active.svg') no-repeat;
+		//		background-size: contain;
+		//	}
+		//	.w-icon-cart {
+		//		background: url('../../images/footer/cart_active.svg') no-repeat;
+		//		background-size: contain;
+		//	}
+		//	.icon-my {
+		//		background: url('../../images/footer/my_active.svg') no-repeat;
+		//		background-size: contain;
+		//	}
+		//}
+	}
+}
+
+//.common-footer {
+//	display: flex;
+//	position: fixed;
+//	left: 0;
+//	bottom: 0;
+//	z-index: 999;
+//	text-align: center;
+//	width: 100%;
+//	height: px2rem($footerHeight);
+//	line-height: px2rem($footerHeight);
+//	color: #ffffff;
+//	font-size: px2rem(26);
+//
+//	.common-left {
+//		@include borderTop();
+//
+//		display: flex;
+//		background: #ffffff;
+//		width: px2rem(490);
+//	}
+//
+//	.common-right {
+//		flex: 1;
+//		color: #ffffff;
+//		background: rgb(239, 51, 56);
+//	}
+//}

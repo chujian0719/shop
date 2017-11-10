@@ -1,0 +1,62 @@
+@import "./constant";
+
+.register {
+	overflow: hidden;
+	background: #ffffff;
+	padding: px2rem($headerHeight + 100) px2rem(25) 0;
+	font-size: px2rem(28);
+	
+	.phone-wrap {
+		display: flex;
+		align-items: center;
+		.input-wrap {
+			flex: 1;
+			margin-top: 0;
+			&:after{
+				right: px2rem(20);
+			}
+		}
+	}
+	
+	.get-code {
+		width: px2rem(220);
+		text-align: center;
+		line-height: px2rem(70);
+		color: #848689;
+		font-size: px2rem(26);
+		background: #eee;
+		&.allow {
+			color: #ffffff;
+			background: red;
+		}
+	}
+
+	.input-wrap {
+		@include borderBottom(#ccc5c5);
+		
+		display: flex;
+		margin-top: px2rem(40);
+		height: px2rem(80);
+		line-height: px2rem(80);
+		label {
+			width: px2rem(96);
+			text-align: right;
+		}
+		input {
+			flex: 1;
+			height: 100%;
+			padding: px2rem(20) px2rem(35);
+			background: transparent;
+		}
+	}
+	
+	.submit {
+		display: block;
+		color: #ffffff;
+		font-size: px2rem(26);
+		text-align: center;
+		background: #e42020;
+		margin-top: px2rem(100);
+		line-height: px2rem(80);
+	}
+}
